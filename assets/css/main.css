@@ -92,6 +92,15 @@ p {
   margin: 0;
 }
 
+/* ─── Wordmark ─────────────────────────────────────────────────────── */
+/* Reusable class for the ZENMATTERS brand name wherever it appears */
+.wordmark {
+  text-transform: uppercase;
+  color: var(--color-navy-700);
+  letter-spacing: 0.12em;
+  font-weight: 900;
+}
+
 /* ─── Layout utilities ─────────────────────────────────────────────── */
 .container-prose {
   margin-inline: auto;
@@ -123,7 +132,7 @@ p {
   letter-spacing: 3px;
 }
 .btn-primary:hover {
-  background-color: var(--color-navy-900);
+  background-color: var(--color-navy-500);
 }
 .btn-primary:focus-visible {
   outline: 2px solid var(--color-navy-700);
@@ -180,11 +189,14 @@ p {
 
 .site-header__nav-link {
   font-size: 0.875rem;
-  color: var(--color-ink-700);
+  color: var(--color-navy-700);
   transition: color 0.15s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 .site-header__nav-link:hover {
-  color: var(--color-navy-700);
+  color: var(--color-navy-500);
 }
 
 /* ─── Mobile menu ──────────────────────────────────────────────────── */
@@ -308,9 +320,7 @@ p {
 h1.hero__heading {
   font-size: clamp(2.25rem, 5vw, 3rem);
   font-weight: 900;
-  text-transform: uppercase;
-  color: var(--color-navy-700);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2em; /* wider tracking at display size */
 }
 
 .hero__tagline {

@@ -28,7 +28,7 @@
         height="40"
         class="site-header__logo-img"
       >
-      <span class="site-header__logo-text"><?= html($siteName) ?></span>
+      <span class="site-header__logo-text wordmark"><?= html($siteName) ?></span>
     </a>
 
     <nav aria-label="Hoofdnavigatie" class="site-header__nav">

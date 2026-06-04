@@ -47,6 +47,7 @@ vendor/                    PHP vendor — not committed
 - **No analytics, no cookies, no third-party scripts.** This is a deliberate privacy choice — don't add Plausible, GA, or similar without asking.
 - **No fonts from Google CDN.** Fonts are self-hosted under `assets/fonts/`.
 - **PHP version**: Kirby 5 requires PHP 8.2+. Use `/opt/homebrew/bin/php` locally — not MAMP's PHP 8.1 alias.
+- **Reusable utility classes for brand elements.** When a visual treatment appears on multiple elements (e.g. the ZENMATTERS wordmark), extract it to a standalone class rather than repeating the properties inside each BEM block. Compose on the element: `class="hero__heading wordmark"`. BEM handles component structure; utility classes handle repeatable brand traits. Keep these classes in `main.css` under their own named section.
 
 ## Blueprint rules
 

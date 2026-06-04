@@ -27,7 +27,7 @@
           class="hero__logo-img"
         >
       </div>
-      <h1 class="hero__heading"><?= html($heading) ?></h1>
+      <h1 class="hero__heading wordmark"><?= html($heading) ?></h1>
       <?php if ($tagline->isNotEmpty()): ?>
         <p class="hero__tagline"><?= html($tagline) ?></p>
       <?php endif ?>
