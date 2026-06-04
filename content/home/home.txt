@@ -1,59 +1,107 @@
 Title: Home
-----
-HeroTitle: Zenmatters
-----
-HeroTagline: Massagepraktijk aan huis · Baarn
-----
-HeroCtaLabel: Neem contact op
-----
-HeroPortrait:
-----
-AboutHeading: Over Zenmatters
-----
-AboutBody: <p>Welkom bij Zenmatters, een kleinschalige massagepraktijk aan huis in Baarn.</p>
-----
-AboutCtaLabel: Maak een afspraak
-----
-NaomiHeading: Over Naomi
-----
-NaomiPortrait:
-----
-NaomiBody: <p>Naomi is gecertificeerd massagetherapeut met jarenlange ervaring.</p>
-----
-NaomiCertifications:
 
--
-  item: ""
 ----
+
+Herotitle: Zenmatters
+
+----
+
+Herotagline: Massagepraktijk aan huis · Baarn
+
+----
+
+Heroctalabel: Maak een afspraak
+
+----
+
+Heroportrait: - file://zsbdatrfv9hqruiv
+
+----
+
+Aboutheading: Over Zenmatters
+
+----
+
+Aboutbody: <p>Welkom bij Zenmatters, een kleinschalige massagepraktijk aan huis in Baarn.</p>
+
+----
+
+Aboutctalabel: Maak een afspraak
+
+----
+
+Naomiheading: Over Naomi
+
+----
+
+Naomiportrait: 
+
+----
+
+Naomibody: <p>Naomi is gecertificeerd massagetherapeut met jarenlange ervaring.</p>
+
+----
+
+Naomicertifications:
+
+- 
+  item: ""
+
+----
+
 Treatments:
 
--
+- 
   name: Ontspanningsmassage
-  description: <p>Een ontspannende massage voor het hele lichaam.</p>
-  forMenToo: "false"
+  description: '<p>Een ontspannende massage voor het hele lichaam.</p>'
+  formentoo: 'false'
+
 ----
+
 Pricing:
 
--
+- 
   category: Ontspanningsmassage
   note: ""
-  items: "60 min | €80\n90 min | €110"
-----
-SummerActive: false
-----
-SummerHeading: Zomeraanbieding
-----
-SummerValidityNote:
-----
-SummerBody:
-----
-SummerPrices:
-----
-PracticalHeading: Praktisch
-----
-PracticalItems:
+  items: |
+    60 min | €80
+    90 min | €110
 
--
-  item: Parkeren gratis voor de deur
 ----
-PracticalNote:
+
+Summeractive: false
+
+----
+
+Summerheading: Zomeraanbieding
+
+----
+
+Summervaliditynote: 
+
+----
+
+Summerbody: 
+
+----
+
+Summerprices: 
+
+----
+
+Practicalheading: Praktisch
+
+----
+
+Practicalitems:
+
+- 
+  item: Parkeren gratis voor de deur
+
+----
+
+Practicalnote: 
+
+----
+
+Uuid: atfnj2vfxeusjga2

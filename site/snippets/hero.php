@@ -21,10 +21,9 @@
     <div class="hero__text">
       <div class="hero__logo">
         <img
-          src="<?= url('assets/images/logo-xl.png') ?>"
+          src="<?= url('assets/images/logo-small.png') ?>"
+          width="300"
           alt="Zenmatters logo"
-          width="160"
-          height="160"
           class="hero__logo-img"
         >
       </div>

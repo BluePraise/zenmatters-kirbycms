@@ -119,6 +119,8 @@ p {
   transition: background-color 0.15s ease;
   border: none;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .btn-primary:hover {
   background-color: var(--color-navy-900);
@@ -290,11 +292,17 @@ p {
   }
 }
 
+.hero__logo {
+  margin-bottom: 1.5rem;
+}
+
 .hero__text {
   display: flex;
   flex-direction: column;
   padding: 2.5rem 2rem;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 h1.hero__heading {

@@ -22,13 +22,13 @@
   <div class="container-wide site-header__inner">
     <a href="<?= url('/') ?>" class="site-header__logo">
       <img
-        src="<?= url('assets/images/logo-small.png') ?>"
+        src="<?= url('assets/images/logo-xs.png') ?>"
         alt="Zenmatters logo"
         width="40"
         height="40"
         class="site-header__logo-img"
       >
-      <?= html($siteName) ?>
+      <span class="site-header__logo-text"><?= html($siteName) ?></span>
     </a>
 
     <nav aria-label="Hoofdnavigatie" class="site-header__nav">
