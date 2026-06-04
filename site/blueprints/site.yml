@@ -20,6 +20,14 @@ tabs:
               href:
                 type: text
                 label: Link (bijv. #contact)
+          navCtaLabel:
+            type: text
+            label: Knoptekst navigatie (CTA)
+            placeholder: Maak een afspraak
+          navCtaHref:
+            type: text
+            label: Knoplink navigatie (CTA)
+            placeholder: "#contact"
 
   contact:
     label: Contact

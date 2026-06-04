@@ -14,8 +14,10 @@
 <body>
 
 <?php
-  $navItems = $site->navigation()->toStructure();
-  $siteName  = $site->siteName()->or('Zenmatters');
+  $navItems   = $site->navigation()->toStructure();
+  $siteName   = $site->siteName()->or('Zenmatters');
+  $navCtaLabel = $site->navCtaLabel();
+  $navCtaHref  = $site->navCtaHref()->or('#contact');
 ?>
 
 <header class="site-header">
@@ -37,6 +39,11 @@
           <?= html($item->label()) ?>
         </a>
       <?php endforeach ?>
+      <?php if ($navCtaLabel->isNotEmpty()): ?>
+        <a href="<?= html($navCtaHref) ?>" class="btn-primary btn-primary--sm">
+          <?= html($navCtaLabel) ?>
+        </a>
+      <?php endif ?>
     </nav>
 
     <button
@@ -60,5 +67,12 @@
         </a>
       </div>
     <?php endforeach ?>
+    <?php if ($navCtaLabel->isNotEmpty()): ?>
+      <div class="mobile-menu-dropdown__item mobile-menu-dropdown__item--cta">
+        <a href="<?= html($navCtaHref) ?>" class="mobile-menu-dropdown__cta">
+          <?= html($navCtaLabel) ?>
+        </a>
+      </div>
+    <?php endif ?>
   </div>
 </header>

@@ -18,7 +18,7 @@ tabs:
             label: Knoptekst
           heroPortrait:
             type: files
-            label: Portretfoto
+            label: Homepage afbeelding
             max: 1
             query: page.files
 
@@ -37,6 +37,11 @@ tabs:
             marks:
               - bold
               - italic
+          aboutImage:
+            type: files
+            label: Afbeelding
+            max: 1
+            query: page.files
           aboutCtaLabel:
             type: text
             label: Knoptekst
@@ -52,7 +57,7 @@ tabs:
             label: Koptekst
           naomiPortrait:
             type: files
-            label: Portretfoto
+            label: Afbeelding (Verticaal aanbevolen)
             max: 1
             query: page.files
           naomiBody:

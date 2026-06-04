@@ -48,7 +48,7 @@
 
   /* Layout */
   --max-prose: 38rem;
-  --max-wide:  64rem;
+  --max-wide:  82rem;
 }
 
 /* ─── Reset / base ─────────────────────────────────────────────────── */
@@ -63,6 +63,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
+  font-size: 1.23rem;
   background-color: var(--color-paper);
   color: var(--navy-900);
   -webkit-font-smoothing: antialiased;
@@ -83,8 +84,10 @@ a {
 /* ─── Typography ───────────────────────────────────────────────────── */
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 300;
-  letter-spacing: -0.02em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-navy-700);
+  letter-spacing: 0.12em;
   margin: 0;
 }
 
@@ -114,6 +117,47 @@ p {
   padding-inline: 1.5rem;
 }
 
+/* ─── Split layout (image ↔ content, alternating) ──────────────────── */
+/*
+ * Default:          content left, image right (DOM order)
+ * .split--reverse:  image left, content right (image gets order:-1 on desktop)
+ * Mobile:           content always stacks above image
+ */
+.split {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  .split--reverse .split__image {
+    order: -1;
+  }
+}
+
+.split__image {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.split__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.split__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 /* ─── Button ───────────────────────────────────────────────────────── */
 .btn-primary {
   display: inline-flex;
@@ -137,6 +181,11 @@ p {
 .btn-primary:focus-visible {
   outline: 2px solid var(--color-navy-700);
   outline-offset: 2px;
+}
+.btn-primary--sm {
+  padding: 0.5rem 1.125rem;
+  font-size: 0.8125rem;
+  letter-spacing: 2px;
 }
 
 /* ─── Header ───────────────────────────────────────────────────────── */
@@ -265,6 +314,26 @@ p {
   background-color: var(--color-sand-50);
 }
 
+.mobile-menu-dropdown__item--cta {
+  padding: 1rem 1.5rem;
+}
+
+.mobile-menu-dropdown__cta {
+  display: block;
+  text-align: center;
+  background-color: var(--color-navy-700);
+  color: var(--color-paper);
+  border-radius: 9999px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background-color 0.15s ease;
+}
+.mobile-menu-dropdown__cta:hover {
+  background-color: var(--color-navy-500);
+}
+
 /* ─── Hero ─────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
@@ -348,6 +417,39 @@ h1.hero__heading {
   }
 }
 
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  color: var(--color-warning);
+  opacity: 0.6;
+  animation: scroll-nudge 2.2s ease-in-out infinite;
+  transition: opacity 0.2s ease;
+}
+.hero__scroll-hint span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.hero__scroll-hint:hover {
+  opacity: 1;
+}
+
+@keyframes scroll-nudge {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.6;
+  }
+  55% {
+    transform: translateX(-50%) translateY(7px);
+    opacity: 1;
+  }
+}
+
 /* ─── Generic section ──────────────────────────────────────────────── */
 .section {
   padding-block: 5rem;
@@ -368,34 +470,7 @@ h1.hero__heading {
   margin-bottom: 2rem;
 }
 
-/* ─── About section ────────────────────────────────────────────────── */
-.about__cta {
-  margin-top: 1.5rem;
-}
-
 /* ─── Naomi section ────────────────────────────────────────────────── */
-.naomi__grid {
-  display: grid;
-  gap: 3rem;
-}
-@media (min-width: 768px) {
-  .naomi__grid {
-    grid-template-columns: 1fr 2fr;
-    align-items: start;
-  }
-}
-
-.naomi__portrait-wrap {
-  position: relative;
-  aspect-ratio: 3 / 4;
-  width: 100%;
-  max-width: 20rem;
-}
-
-.naomi__portrait {
-  object-fit: cover;
-  border-radius: 2px;
-}
 
 .naomi__certs-label {
   font-size: 0.75rem;
@@ -417,13 +492,29 @@ h1.hero__heading {
 }
 
 /* ─── Treatments section ───────────────────────────────────────────── */
-.treatments__grid,
+/* One column per treatment, auto-created by the grid */
+.treatments__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .treatments__grid {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+.treatments__grid article {
+  padding: 1.5rem;
+  border: 1px solid var(--color-sand-200);
+  border-radius: 4px;
+}
+
+/* ─── Pricing section ──────────────────────────────────────────────── */
 .pricing__grid {
   display: grid;
   gap: 2.5rem;
 }
 @media (min-width: 768px) {
-  .treatments__grid,
   .pricing__grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -433,20 +524,25 @@ h1.hero__heading {
   font-family: var(--font-display);
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-sand-200);
 }
 
 .treatment__badge {
-  margin-left: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.475rem;
   font-family: var(--font-sans);
-  color: var(--color-ink-500);
+  background-color: var(--color-navy-700);
+  color: var(--color-paper);
+  display: block;
+  padding: 0.125rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  max-width: max-content;
 }
 
 .treatment__body {
   color: var(--color-ink-700);
 }
 
-/* ─── Pricing section ──────────────────────────────────────────────── */
 .pricing__category {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -624,6 +720,7 @@ h1.hero__heading {
 }
 
 .site-footer__copyright {
+  text-transform: uppercase;
   flex-shrink: 0;
 }
 
@@ -631,6 +728,7 @@ h1.hero__heading {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem;
+  text-transform: uppercase;
 }
 
 .site-footer__nav-link {
@@ -644,7 +742,7 @@ h1.hero__heading {
 .richtext p {
   margin-bottom: 1rem;
   line-height: 1.7;
-  color: var(--color-ink-700);
+  color: var(--color-navy-900);
 }
 
 /* ─── Privacy page ─────────────────────────────────────────────────── */

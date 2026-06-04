@@ -1,30 +1,54 @@
 Title: Zenmatters
+
 ----
+
 Sitename: Zenmatters
+
 ----
+
 Navigation:
 
--
+- 
   label: Over mij
-  href: "#naomi"
--
+  href: '#naomi'
+- 
   label: Behandelingen
-  href: "#behandelingen"
--
+  href: '#behandelingen'
+- 
   label: Tarieven
-  href: "#tarieven"
--
+  href: '#tarieven'
+- 
   label: Contact
-  href: "#contact"
+  href: '#contact'
+
 ----
-ContactHeading: Contact
+
+Navctalabel: Boek behandeling
+
 ----
-ContactIntro: Neem gerust contact op voor meer informatie of om een afspraak te maken.
+
+Navctahref: #contact
+
 ----
-Phone:
+
+Contactheading: Contact
+
 ----
-Email:
+
+Contactintro: Neem gerust contact op voor meer informatie of om een afspraak te maken.
+
 ----
+
+Phone: 
+
+----
+
+Email: 
+
+----
+
 Address: Baarn
+
 ----
-CancellationPolicy:
+
+Cancellationpolicy: 

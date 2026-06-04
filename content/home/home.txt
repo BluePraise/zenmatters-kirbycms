@@ -26,6 +26,10 @@ Aboutbody: <p>Welkom bij Zenmatters, een kleinschalige massagepraktijk aan huis 
 
 ----
 
+Aboutimage: - file://vuicwhnidejnxt72
+
+----
+
 Aboutctalabel: Maak een afspraak
 
 ----
@@ -34,7 +38,7 @@ Naomiheading: Over Naomi
 
 ----
 
-Naomiportrait: 
+Naomiportrait: - file://gnhhqg90tfyhkm2k
 
 ----
 
@@ -54,6 +58,14 @@ Treatments:
 - 
   name: Ontspanningsmassage
   description: '<p>Een ontspannende massage voor het hele lichaam.</p>'
+  formentoo: 'false'
+- 
+  name: Behandeling 2
+  description: '<p>Behandeling voorbeeld tekst</p>'
+  formentoo: 'true'
+- 
+  name: Behandeling 3
+  description: '<p>Behandeling voorbeeld tekst</p>'
   formentoo: 'false'
 
 ----
