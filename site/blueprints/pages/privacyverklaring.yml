@@ -1,0 +1,16 @@
+title: Privacyverklaring
+
+sections:
+  content:
+    type: fields
+    fields:
+      title:
+        type: text
+        label: Paginatitel
+      body:
+        type: writer
+        label: Tekst
+        marks:
+          - bold
+          - italic
+          - link

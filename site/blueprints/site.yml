@@ -1,0 +1,53 @@
+title: Site
+
+tabs:
+  identity:
+    label: Naam & navigatie
+    sections:
+      identity:
+        type: fields
+        fields:
+          siteName:
+            type: text
+            label: Sitenaam
+          navigation:
+            type: structure
+            label: Navigatie
+            fields:
+              label:
+                type: text
+                label: Label
+              href:
+                type: text
+                label: Link (bijv. #contact)
+
+  contact:
+    label: Contact
+    sections:
+      contact:
+        type: fields
+        fields:
+          contactHeading:
+            type: text
+            label: Koptekst
+          contactIntro:
+            type: textarea
+            label: Inleidingstekst
+          phone:
+            type: text
+            label: Telefoon
+          email:
+            type: text
+            label: E-mailadres
+          address:
+            type: textarea
+            label: Praktijkadres
+          cancellationPolicy:
+            type: textarea
+            label: Annuleringsbeleid
+
+  pages:
+    label: Pagina's
+    sections:
+      pages:
+        type: pages

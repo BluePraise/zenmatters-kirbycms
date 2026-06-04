@@ -1,0 +1,3 @@
+Title: Privacyverklaring
+----
+Body: <p>Deze website verzamelt geen persoonsgegevens, gebruikt geen cookies en bevat geen tracking of analytics.</p><p>Als je contact opneemt via telefoon, Signal, WhatsApp of e-mail, worden je gegevens alleen gebruikt om je bericht te beantwoorden en eventueel een afspraak te plannen. Ze worden niet gedeeld met derden.</p><p>Vragen over privacy? Stuur een bericht via de contactgegevens op de homepage.</p>

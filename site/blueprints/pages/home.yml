@@ -1,0 +1,164 @@
+title: Homepage
+
+tabs:
+  hero:
+    label: Hero
+    sections:
+      hero:
+        type: fields
+        fields:
+          heroTitle:
+            type: text
+            label: Koptekst
+          heroTagline:
+            type: text
+            label: Ondertitel
+          heroCtaLabel:
+            type: text
+            label: Knoptekst
+          heroPortrait:
+            type: files
+            label: Portretfoto
+            max: 1
+            query: page.files
+
+  about:
+    label: Over Zenmatters
+    sections:
+      about:
+        type: fields
+        fields:
+          aboutHeading:
+            type: text
+            label: Koptekst
+          aboutBody:
+            type: writer
+            label: Tekst
+            marks:
+              - bold
+              - italic
+          aboutCtaLabel:
+            type: text
+            label: Knoptekst
+
+  naomi:
+    label: Over Naomi
+    sections:
+      naomi:
+        type: fields
+        fields:
+          naomiHeading:
+            type: text
+            label: Koptekst
+          naomiPortrait:
+            type: files
+            label: Portretfoto
+            max: 1
+            query: page.files
+          naomiBody:
+            type: writer
+            label: Tekst
+            marks:
+              - bold
+              - italic
+          naomiCertifications:
+            type: structure
+            label: Certificaten
+            fields:
+              item:
+                type: text
+                label: Certificaat
+
+  treatments:
+    label: Behandelingen
+    sections:
+      treatments:
+        type: fields
+        fields:
+          treatments:
+            type: structure
+            label: Behandelingen
+            fields:
+              name:
+                type: text
+                label: Naam
+              description:
+                type: writer
+                label: Omschrijving
+                marks:
+                  - bold
+                  - italic
+              forMenToo:
+                type: toggle
+                label: Ook voor mannen
+                text: Ja
+
+  pricing:
+    label: Tarieven
+    sections:
+      pricing:
+        type: fields
+        fields:
+          pricing:
+            type: structure
+            label: Tariefgroepen
+            fields:
+              category:
+                type: text
+                label: Categorie
+              note:
+                type: text
+                label: Opmerking (optioneel)
+              items:
+                type: textarea
+                label: "Prijzen (één per regel: duur | prijs, bijv: 60 min | €80)"
+
+  summerOffer:
+    label: Aanbieding
+    sections:
+      summerOffer:
+        type: fields
+        fields:
+          summerActive:
+            type: toggle
+            label: Sectie tonen
+            text: Ja, toon de aanbieding
+          summerHeading:
+            type: text
+            label: Koptekst
+          summerValidityNote:
+            type: text
+            label: Geldigheidsperiode
+          summerBody:
+            type: textarea
+            label: Tekst
+          summerPrices:
+            type: structure
+            label: Prijzen
+            fields:
+              duration:
+                type: text
+                label: Duur
+              price:
+                type: text
+                label: Prijs
+
+  practical:
+    label: Praktisch
+    sections:
+      practical:
+        type: fields
+        fields:
+          practicalHeading:
+            type: text
+            label: Koptekst
+          practicalItems:
+            type: structure
+            label: Praktische informatie
+            fields:
+              item:
+                type: text
+                label: Item
+          practicalNote:
+            type: textarea
+            label: Toegankelijkheidsnotitie
