@@ -124,12 +124,25 @@ composer update
 # Regenerate Composer autoload after adding plugins
 composer dump-autoload
 
-# Pull content from staging → local (e.g. after owner edits via Panel)
-rsync -avz -e "ssh -p18765" \
-  u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/ \
-  ./content/
+# ⚠️  IMPORTANT: staging stores the home page as content/1_home/ (Kirby page ordering prefix).
+#    Local has content/home/. Always use the explicit paths below — never rsync content/ wholesale.
 
-# Push full project local → staging (use carefully — overwrites remote)
+# Pull content/home from staging → local
+rsync -avz -e "ssh -p18765" \
+  u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/1_home/ \
+  ./content/home/
+
+# Pull site.txt from staging → local
+rsync -avz -e "ssh -p18765" \
+  u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/site.txt \
+  ./content/site.txt
+
+# Push home.txt to staging (maps local content/home/ → remote content/1_home/)
+rsync -avz -e "ssh -p18765" \
+  ./content/home/home.txt \
+  u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/1_home/home.txt
+
+# Push code (non-content) to staging
 rsync -avz -e "ssh -p18765" \
   --exclude='.git' \
   --exclude='kirby/' \
@@ -138,11 +151,7 @@ rsync -avz -e "ssh -p18765" \
   --exclude='.claude/' \
   --exclude='site/cache/' \
   --exclude='site/sessions/' \
-  --exclude='content/**/*.jpg' \
-  --exclude='content/**/*.jpeg' \
-  --exclude='content/**/*.png' \
-  --exclude='content/**/*.gif' \
-  --exclude='content/**/*.webp' \
+  --exclude='content/' \
   ./ \
   u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/
 ```
