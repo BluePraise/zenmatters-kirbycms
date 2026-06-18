@@ -522,7 +522,8 @@ h1.hero__heading {
 
 .treatment__name {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding-block-end: 1.25rem;
   margin-bottom: 0.75rem;
   border-bottom: 1px solid var(--color-sand-200);
 }
@@ -741,7 +742,6 @@ h1.hero__heading {
 /* ─── RichText ─────────────────────────────────────────────────────── */
 .richtext p {
   margin-bottom: 1rem;
-  line-height: 1.7;
   color: var(--color-navy-900);
 }
 
