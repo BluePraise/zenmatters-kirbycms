@@ -23,7 +23,7 @@ Navigation:
 
 ----
 
-Navctalabel: Boek behandeling
+Navctalabel: Neem contact op en plan een massage
 
 ----
 
@@ -31,24 +31,30 @@ Navctahref: #contact
 
 ----
 
-Contactheading: Contact
+Contactheading: Afspraak maken / Contact
 
 ----
 
-Contactintro: Neem gerust contact op voor meer informatie of om een afspraak te maken.
+Contactintro:
+
+Een afspraak maken kan via Signal, WhatsApp, e-mail of telefonisch.
+Krijg je geen gehoor? Dan ben ik waarschijnlijk aan het masseren. Stuur een bericht, dan neem ik zo snel mogelijk contact met je op.
 
 ----
 
-Phone: 
+Phone: 06 13086055
 
 ----
 
-Email: 
+Email: info@zenmatters.nl
 
 ----
 
-Address: Baarn
+Address: Lindenlaan, Baarn
 
 ----
 
-Cancellationpolicy: 
+Cancellationpolicy:
+
+Een afspraak maken kan via Signal, WhatsApp, e-mail of telefonisch.
+Krijg je geen gehoor? Dan ben ik waarschijnlijk aan het masseren. Stuur een bericht, dan neem ik zo snel mogelijk contact met je op.

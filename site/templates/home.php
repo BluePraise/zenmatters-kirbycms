@@ -5,8 +5,6 @@
   <?php snippet('about') ?>
   <?php snippet('naomi') ?>
   <?php snippet('treatments') ?>
-  <?php snippet('pricing') ?>
-  <?php snippet('summer-offer') ?>
   <?php snippet('practical') ?>
   <?php snippet('contact') ?>
 </main>

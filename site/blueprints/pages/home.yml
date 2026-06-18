@@ -75,11 +75,18 @@ tabs:
                 label: Certificaat
 
   treatments:
-    label: Behandelingen
+    label: Behandelingen & Tarieven
     sections:
       treatments:
         type: fields
         fields:
+          promoActive:
+            type: toggle
+            label: Actieprijs tonen
+            text: Ja, toon de actieprijs op de behandelkaarten
+          promoText:
+            type: textarea
+            label: Promotekst (optioneel — wordt getoond boven de behandelingen)
           treatments:
             type: structure
             label: Behandelingen
@@ -87,66 +94,34 @@ tabs:
               name:
                 type: text
                 label: Naam
+              image:
+                type: files
+                label: Afbeelding
+                max: 1
+                query: page.files
               description:
                 type: writer
                 label: Omschrijving
                 marks:
                   - bold
                   - italic
+              durations:
+                type: textarea
+                label: "Duur & prijs (één per regel: duur | prijs, bijv: 60 min | €70)"
+              promoDurations:
+                type: textarea
+                label: "Actieprijs (zelfde formaat, optioneel — wordt getoond als aanbieding actief is)"
+              ctaLabel:
+                type: text
+                label: Knoptekst
+                placeholder: Maak een afspraak
+              note:
+                type: text
+                label: Opmerking (optioneel)
               forMenToo:
                 type: toggle
                 label: Ook voor mannen
                 text: Ja
-
-  pricing:
-    label: Tarieven
-    sections:
-      pricing:
-        type: fields
-        fields:
-          pricing:
-            type: structure
-            label: Tariefgroepen
-            fields:
-              category:
-                type: text
-                label: Categorie
-              note:
-                type: text
-                label: Opmerking (optioneel)
-              items:
-                type: textarea
-                label: "Prijzen (één per regel: duur | prijs, bijv: 60 min | €80)"
-
-  summerOffer:
-    label: Aanbieding
-    sections:
-      summerOffer:
-        type: fields
-        fields:
-          summerActive:
-            type: toggle
-            label: Sectie tonen
-            text: Ja, toon de aanbieding
-          summerHeading:
-            type: text
-            label: Koptekst
-          summerValidityNote:
-            type: text
-            label: Geldigheidsperiode
-          summerBody:
-            type: textarea
-            label: Tekst
-          summerPrices:
-            type: structure
-            label: Prijzen
-            fields:
-              duration:
-                type: text
-                label: Duur
-              price:
-                type: text
-                label: Prijs
 
   practical:
     label: Praktisch

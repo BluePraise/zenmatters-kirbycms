@@ -183,7 +183,7 @@ p {
   outline-offset: 2px;
 }
 .btn-primary--sm {
-  padding: 0.5rem 1.125rem;
+  padding: 1rem;
   font-size: 0.8125rem;
   letter-spacing: 2px;
 }
@@ -491,41 +491,53 @@ h1.hero__heading {
   margin-top: 0.25rem;
 }
 
-/* ─── Treatments section ───────────────────────────────────────────── */
-/* One column per treatment, auto-created by the grid */
-.treatments__grid {
+/* ─── Treatment cards (behandelingen + tarieven) ───────────────────── */
+.treatment-cards {
   display: grid;
-  gap: 2.5rem;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(360px, 1fr));
 }
-@media (min-width: 768px) {
-  .treatments__grid {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
+
+.treatment-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-sand-50);
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--color-sand-50);
+  /* subtle box shadow */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-.treatments__grid article {
+
+.treatment-card__image {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.treatment-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.treatment-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1.5rem;
-  border: 1px solid var(--color-sand-200);
-  border-radius: 4px;
+  gap: 1rem;
 }
 
-/* ─── Pricing section ──────────────────────────────────────────────── */
-.pricing__grid {
-  display: grid;
-  gap: 2.5rem;
-}
-@media (min-width: 768px) {
-  .pricing__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.treatment__name {
+.treatment-card__name {
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  padding-block-end: 1.25rem;
-  margin-bottom: 0.75rem;
-  border-bottom: 1px solid var(--color-sand-200);
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--color-navy-900);
+  /* Text wrap */
+  white-space: normal;
+  word-wrap: break-word;
+  margin-bottom: 1rem;
 }
 
 .treatment__badge {
@@ -536,81 +548,74 @@ h1.hero__heading {
   display: block;
   padding: 0.125rem 0.75rem;
   border-radius: 9999px;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
   max-width: max-content;
 }
 
-.treatment__body {
+.treatment-card__durations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--color-sand-100);
+  border-bottom: 1px solid var(--color-sand-100);
+}
+
+.treatment-card__duration {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.5rem;
+  font-size: 1.15rem;
   color: var(--color-ink-700);
 }
 
-.pricing__category {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.treatment-card__duration + .treatment-card__duration {
+  border-top: 1px solid var(--color-sand-100);
 }
 
-.pricing__note {
-  font-size: 0.875rem;
+.treatment-card__dur-price {
+  font-weight: 600;
+  color: var(--color-navy-700);
+}
+
+.treatment-card__desc {
+  color: var(--color-ink-700);
+  font-size: 1.15rem;
+  flex: 1;
+}
+
+.treatment-card__note {
+  font-size: 0.8125rem;
   color: var(--color-ink-500);
-  margin-bottom: 1rem;
-  white-space: pre-line;
 }
 
-.pricing__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.treatment-card__cta {
+  margin-top: auto;
+  align-self: center;
 }
 
-.pricing__list li {
-  display: flex;
-  justify-content: space-between;
-  padding-block: 0.75rem;
-  color: var(--color-ink-700);
-  border-top: 1px solid var(--color-sand-200);
-}
-.pricing__list li:first-child {
-  border-top: none;
-}
-
-.pricing__price {
-  font-weight: 500;
+/* ─── Promo banner (treatments section) ────────────────────────────── */
+.treatments__promo-banner {
+  margin-bottom: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-navy-100);
+  border-left: 3px solid var(--color-navy-700);
+  border-radius: 4px;
+  color: var(--color-navy-900);
+  font-size: 0.9375rem;
+  line-height: 1.6;
 }
 
-/* ─── Summer offer section ─────────────────────────────────────────── */
-.summer__heading {
-  color: var(--color-paper);
-  margin-bottom: 1rem;
+/* Promo pricing within treatment cards */
+.treatment-card__dur-price--original {
+  text-decoration: line-through;
+  color: var(--color-ink-500);
+  font-weight: 300;
 }
 
-.summer__validity {
-  color: color-mix(in srgb, var(--color-paper) 80%, transparent);
-  font-style: italic;
-  margin-bottom: 1.5rem;
-}
-
-.summer__body {
-  margin-bottom: 2rem;
-  line-height: 1.7;
-  color: color-mix(in srgb, var(--color-paper) 90%, transparent);
-  white-space: pre-line;
-}
-
-.summer__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.summer__list li {
-  display: flex;
-  justify-content: space-between;
-  padding-block: 0.75rem;
-  border-top: 1px solid color-mix(in srgb, var(--color-paper) 20%, transparent);
-}
-.summer__list li:first-child {
-  border-top: none;
+.treatment-card__dur-price--promo {
+  font-weight: 600;
+  color: var(--color-navy-700);
+  margin-left: 0.5rem;
 }
 
 /* ─── Practical section ────────────────────────────────────────────── */

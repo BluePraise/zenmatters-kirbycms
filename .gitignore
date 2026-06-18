@@ -53,3 +53,14 @@ Icon
 # ---------------
 /vendor
 
+# Content (managed via Panel + rsync, not git)
+# ---------------
+/content/**/*.jpg
+/content/**/*.jpeg
+/content/**/*.png
+/content/**/*.gif
+/content/**/*.webp
+/content/**/*.svg
+/content/**/*.mp4
+/content/**/*.pdf
+

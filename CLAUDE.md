@@ -105,6 +105,12 @@ Don't add without asking:
 - i18n / multiple locales (site is Dutch-only by design)
 - A database or headless API layer
 
+## Staging server
+
+- **SSH**: `u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com -p18765`
+- **Remote root**: `/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby`
+- **Host**: Navesinck Web Solutions (managed PHP)
+
 ## Commands
 
 ```bash
@@ -117,4 +123,14 @@ composer update
 
 # Regenerate Composer autoload after adding plugins
 composer dump-autoload
+
+# Pull content from staging → local (e.g. after owner edits via Panel)
+rsync -avz -e "ssh -p18765" \
+  u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/ \
+  ./content/
+
+# Push content local → staging (use carefully — overwrites remote content)
+rsync -avz -e "ssh -p18765" \
+  ./content/ \
+  u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/
 ```
