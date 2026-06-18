@@ -63,9 +63,17 @@ Naomicertifications:
 
 ----
 
+Promoactive: true
+
+----
+
+Promotext: 🏖️  Maak kennis met Zenmatters via ons speciale zomertarief — geldig in juli, augustus en september 2026.
+
+----
+
 Treatments:
 
--
+- 
   name: Ontspanningsmassage
   image:
     - file://x1y6xplakpwsauyc
@@ -81,7 +89,7 @@ Treatments:
   ctalabel: ""
   note: ""
   formentoo: 'true'
--
+- 
   name: 'Rug-, nek- en schoudermassage'
   image:
     - file://x1y6xplakpwsauyc
@@ -97,7 +105,7 @@ Treatments:
   ctalabel: ""
   note: ""
   formentoo: 'false'
--
+- 
   name: >
     Massage bij fibromyalgie en chronische
     pijn
@@ -115,7 +123,7 @@ Treatments:
   ctalabel: ""
   note: ""
   formentoo: 'false'
--
+- 
   name: Stoelmassage
   image:
     - file://x1y6xplakpwsauyc
@@ -129,14 +137,6 @@ Treatments:
   ctalabel: ""
   note: 'Stoelmassage op locatie: binnen 10 km van Baarn €5 toeslag per afspraak. Buiten deze straal in overleg. Bedrijven: neem contact op voor tarieven per dagdeel of uur.'
   formentoo: 'false'
-
-----
-
-Promoactive: true
-
-----
-
-Promotext: Maak kennis met Zenmatters via ons speciale zomertarief — geldig in juli, augustus en september 2026.
 
 ----
 
