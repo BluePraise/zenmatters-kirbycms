@@ -129,8 +129,20 @@ rsync -avz -e "ssh -p18765" \
   u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/ \
   ./content/
 
-# Push content local → staging (use carefully — overwrites remote content)
+# Push full project local → staging (use carefully — overwrites remote)
 rsync -avz -e "ssh -p18765" \
-  ./content/ \
-  u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/
+  --exclude='.git' \
+  --exclude='kirby/' \
+  --exclude='vendor/' \
+  --exclude='media/' \
+  --exclude='.claude/' \
+  --exclude='site/cache/' \
+  --exclude='site/sessions/' \
+  --exclude='content/**/*.jpg' \
+  --exclude='content/**/*.jpeg' \
+  --exclude='content/**/*.png' \
+  --exclude='content/**/*.gif' \
+  --exclude='content/**/*.webp' \
+  ./ \
+  u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/
 ```
