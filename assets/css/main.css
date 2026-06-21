@@ -192,26 +192,53 @@ p {
 }
 
 /* ─── Notification bar ─────────────────────────────────────────────── */
+body.has-notification {
+  --notification-height: 3.25rem;
+}
+
 .notification-bar {
   position: fixed;
   top: 0;
-  inset-inline: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
   z-index: 51;
-  height: var(--notification-height);
+  min-height: var(--notification-height);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   background-color: var(--color-navy-700);
-  padding-inline: 1.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .notification-bar__text {
   color: var(--color-sand-50);
-  font-size: 0.8125rem;
-  line-height: 1;
-  letter-spacing: 0.5px;
-  max-width: var(--max-wide);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  text-align: center;
+  max-width: 100%;
   margin-inline: auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  body.has-notification {
+    --notification-height: 2.75rem;
+  }
+
+  .notification-bar {
+    padding-inline: 1.5rem;
+  }
+
+  .notification-bar__text {
+    font-size: 0.8125rem;
+    line-height: 1;
+    letter-spacing: 0.5px;
+  }
 }
 
 /* ─── Header ───────────────────────────────────────────────────────── */
@@ -476,6 +503,12 @@ h1.hero__heading {
   }
 }
 
+@media (max-width: 400px) {
+  .hero__scroll-hint {
+    display: none;
+  }
+}
+
 /* ─── Generic section ──────────────────────────────────────────────── */
 .section {
   padding-block: 5rem;
@@ -521,7 +554,12 @@ h1.hero__heading {
 .treatment-cards {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2, minmax(360px, 1fr));
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .treatment-cards {
+    grid-template-columns: repeat(2, minmax(360px, 1fr));
+  }
 }
 
 .treatment-card {

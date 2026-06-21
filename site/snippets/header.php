@@ -11,8 +11,6 @@
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="<?= url('assets/css/main.css') ?>">
 </head>
-<body>
-
 <?php
   $navItems   = $site->navigation()->toStructure();
   $siteName   = $site->siteName()->or('Zenmatters');
@@ -21,10 +19,11 @@
 
   $notificationActive = $site->notificationActive()->toBool();
   $notificationText   = $site->notificationText();
+  $showNotification   = $notificationActive && $notificationText->isNotEmpty();
 ?>
+<body<?= $showNotification ? ' class="has-notification"' : '' ?>>
 
-<?php if ($notificationActive && $notificationText->isNotEmpty()): ?>
-  <style>:root { --notification-height: 2.75rem; }</style>
+<?php if ($showNotification): ?>
   <div class="notification-bar">
     <p class="notification-bar__text"><?= html($notificationText) ?></p>
   </div>
