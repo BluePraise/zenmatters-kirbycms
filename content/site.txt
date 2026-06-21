@@ -11,13 +11,10 @@ Navigation:
 - 
   label: Over mij
   href: '#naomi'
-- 
+-
   label: Behandelingen
   href: '#behandelingen'
-- 
-  label: Tarieven
-  href: '#tarieven'
-- 
+-
   label: Contact
   href: '#contact'
 
@@ -56,5 +53,6 @@ Address: Lindenlaan, Baarn
 
 Cancellationpolicy:
 
-Een afspraak maken kan via Signal, WhatsApp, e-mail of telefonisch.
-Krijg je geen gehoor? Dan ben ik waarschijnlijk aan het masseren. Stuur een bericht, dan neem ik zo snel mogelijk contact met je op.
+Mocht je verhinderd zijn, laat het dan zo snel mogelijk weten.
+Afspraken kunnen tot 24 uur van tevoren kosteloos worden geannuleerd of verplaatst.
+Bij latere annulering kan de behandeling in rekening worden gebracht.

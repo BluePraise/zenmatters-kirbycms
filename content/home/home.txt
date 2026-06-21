@@ -14,7 +14,7 @@ Heroctalabel: Neem contact op en plan een massage
 
 ----
 
-Heroportrait: - file://xxxz81tsayvq7opn
+Heroportrait: - file://vuicwhnidejnxt72
 
 ----
 
@@ -22,7 +22,7 @@ Aboutheading: Over Zenmatters
 
 ----
 
-Aboutbody: <p>Zenmatters is een kleinschalige massagepraktijk aan huis in Baarn, waar rust en aandacht centraal staan.</p><p>Ik richt me op ontspanningsmassage en massage voor vrouwen bij spanningsklachten, vermoeidheid, fibromyalgie en chronische pijn. De druk stemmen we altijd samen af, zodat de massage precies aansluit bij wat jij op dat moment nodig hebt.</p><p>Zenmatters – persoonlijk, ontspannen en zonder haast.</p>
+Aboutbody: <p>Zenmatters is een kleinschalige massagepraktijk voor vrouwen aan huis in Baarn, waar rust en aandacht centraal staan.</p><p>Ik bied ontspanningsmassage en massage bij spanningsklachten, vermoeidheid, fibromyalgie en chronische pijn. De massage stemmen we altijd samen af, zodat deze aansluit bij wat jij op dat moment nodig hebt.</p><p>Zenmatters – persoonlijk, ontspannen en zonder haast.</p>
 
 ----
 
@@ -67,7 +67,12 @@ Promoactive: true
 
 ----
 
-Promotext: 🏖️  Maak kennis met Zenmatters via ons speciale zomertarief — geldig in juli, augustus en september 2026.
+Promotext:
+
+☀️ Speciaal zomertarief 2026
+
+Maak deze zomer kennis met Zenmatters tegen een gereduceerd kennismakingstarief.
+Geldig in juli, augustus en september 2026.
 
 ----
 
@@ -76,7 +81,7 @@ Treatments:
 - 
   name: Ontspanningsmassage
   image:
-    - file://x1y6xplakpwsauyc
+    - file://mdbicquoid4zle9b
   description: '<p>Een relaxte massage die helpt bij ontspanning en het verminderen van stress, vermoeidheid en opgebouwde spanning in het lichaam. De massage kan het hele lichaam omvatten of juist gericht zijn op specifieke gebieden, afhankelijk van waar op dat moment jouw behoefte ligt. De druk stemmen we altijd samen af, zodat de massage precies aansluit bij wat jij prettig vindt.</p>'
   durations: |
     45 min | €55
@@ -88,12 +93,12 @@ Treatments:
     75 min | €75
   ctalabel: ""
   note: ""
-  formentoo: 'true'
+  formentoo: 'false'
 - 
   name: 'Rug-, nek- en schoudermassage'
   image:
-    - file://x1y6xplakpwsauyc
-  description: '<p>Gerichte massage bij vastzittende spieren en spanning in de rug, nek en schouders.</p>'
+    - file://mdbicquoid4zle9b
+  description: '<p>Gerichte massage bij vastzittende spieren en spanning in de rug, nek en schouders.<br>Met extra aandacht voor gebieden waar klachten of overbelasting zijn ontstaan.</p>'
   durations: |
     45 min | €55
     60 min | €70
@@ -110,7 +115,7 @@ Treatments:
     Massage bij fibromyalgie en chronische
     pijn
   image:
-    - file://x1y6xplakpwsauyc
+    - file://mdbicquoid4zle9b
   description: '<p>Een rustige, aangepaste massage gericht op ontspanning, doorbloeding en verlichting van spanning en pijnklachten.<br>Altijd afgestemd op wat voor jou op dat moment mogelijk en prettig is.</p>'
   durations: |
     45 min | €55
@@ -126,8 +131,8 @@ Treatments:
 - 
   name: Stoelmassage
   image:
-    - file://x1y6xplakpwsauyc
-  description: '<p>Een korte, effectieve massage van rug, nek, schouders en armen, over de kleding heen.<br>In de praktijk of op locatie bij particulieren en bedrijven.</p>'
+    - file://mdbicquoid4zle9b
+  description: '<p>Een korte, effectieve massage van rug, nek, schouders en armen, over de kleding heen.<br>Ideaal bij spanning door werk, langdurig zitten of een drukke dag.<br>In de praktijk of op locatie bij particulieren en bedrijven.<br>Bedrijven kunnen contact opnemen voor mogelijkheden en tarieven.</p>'
   durations: |
     25 min | €30
     35 min | €40
@@ -164,34 +169,6 @@ Practicalitems:
 ----
 
 Practicalnote: De praktijkruimte bevindt zich op de eerste verdieping, bereikbaar via een trap.
-
-----
-
-Pricing:
-
-- 
-  category: >
-    Ontspanningsmassage, rug-nek-schouders,
-    fibromyalgie en chronische pijn
-  note: ""
-  items: |
-    45 min | €55
-    60 min | €70
-    75 min | €85
-- 
-  category: Stoelmassage (in de praktijk)
-  note: >
-    Stoelmassage op locatie. Binnen een
-    straal van 10 km van Baarn geldt een
-    toeslag van €5 per afspraak. Buiten
-    deze straal wordt de toeslag in overleg
-    bepaald. Stoelmassages bij bedrijven
-    zijn mogelijk per dagdeel of per uur.
-    Neem contact op voor de mogelijkheden en
-    tarieven.
-  items: |
-    25 min | €30
-    35 min | €40
 
 ----
 

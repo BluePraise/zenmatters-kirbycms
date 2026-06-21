@@ -75,7 +75,7 @@ tabs:
                 label: Certificaat
 
   treatments:
-    label: Behandelingen & Tarieven
+    label: Behandelingen
     sections:
       treatments:
         type: fields
