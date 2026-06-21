@@ -78,6 +78,9 @@ tabs:
           address:
             type: textarea
             label: Praktijkadres
+          chamberOfCommerce:
+            type: number
+            label: Kamer van Koophandel nummer
           cancellationPolicy:
             type: textarea
             label: Annuleringsbeleid

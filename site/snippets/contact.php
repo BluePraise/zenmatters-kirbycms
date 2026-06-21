@@ -4,6 +4,7 @@
   $phone              = $site->phone();
   $email              = $site->email();
   $address            = $site->address();
+  $chamberOfCommerce  = $site->chamberOfCommerce();
   $cancellationPolicy = $site->cancellationPolicy();
 
   $phoneDigits = preg_replace('/[^\d+]/', '', $phone->value());
@@ -75,6 +76,13 @@
         <div class="contact__row">
           <dt class="contact__dt">Praktijkadres</dt>
           <dd><?= html($address) ?></dd>
+        </div>
+      <?php endif ?>
+
+      <?php if ($chamberOfCommerce->isNotEmpty()): ?>
+        <div class="contact__row">
+          <dt class="contact__dt">KvK</dt>
+          <dd><?= html($chamberOfCommerce) ?></dd>
         </div>
       <?php endif ?>
     </dl>

@@ -1,12 +1,16 @@
 <?php
   $navItems = $site->navigation()->toStructure();
   $siteName  = $site->siteName()->or('Zenmatters');
+  $chamberOfCommerce  = $site->chamberOfCommerce();
 ?>
 
 <footer class="site-footer">
   <div class="container-wide site-footer__inner">
     <p class="site-footer__copyright">
       © <?= date('Y') ?> <?= html($siteName) ?>
+      <?php if ($chamberOfCommerce->isNotEmpty()): ?>
+        <span class="site-footer__kvk"> - KvK <?= html($chamberOfCommerce) ?></span>
+      <?php endif ?>
     </p>
     <nav aria-label="Footer-navigatie" class="site-footer__nav">
       <?php foreach ($navItems as $item): ?>

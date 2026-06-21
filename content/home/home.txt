@@ -80,8 +80,7 @@ Treatments:
 
 - 
   name: Ontspanningsmassage
-  image:
-    - file://mdbicquoid4zle9b
+  image: [ ]
   description: '<p>Een relaxte massage die helpt bij ontspanning en het verminderen van stress, vermoeidheid en opgebouwde spanning in het lichaam. De massage kan het hele lichaam omvatten of juist gericht zijn op specifieke gebieden, afhankelijk van waar op dat moment jouw behoefte ligt. De druk stemmen we altijd samen af, zodat de massage precies aansluit bij wat jij prettig vindt.</p>'
   durations: |
     45 min | €55
@@ -96,8 +95,7 @@ Treatments:
   formentoo: 'false'
 - 
   name: 'Rug-, nek- en schoudermassage'
-  image:
-    - file://mdbicquoid4zle9b
+  image: [ ]
   description: '<p>Gerichte massage bij vastzittende spieren en spanning in de rug, nek en schouders.<br>Met extra aandacht voor gebieden waar klachten of overbelasting zijn ontstaan.</p>'
   durations: |
     45 min | €55
@@ -114,8 +112,7 @@ Treatments:
   name: >
     Massage bij fibromyalgie en chronische
     pijn
-  image:
-    - file://mdbicquoid4zle9b
+  image: [ ]
   description: '<p>Een rustige, aangepaste massage gericht op ontspanning, doorbloeding en verlichting van spanning en pijnklachten.<br>Altijd afgestemd op wat voor jou op dat moment mogelijk en prettig is.</p>'
   durations: |
     45 min | €55
@@ -130,8 +127,7 @@ Treatments:
   formentoo: 'false'
 - 
   name: Stoelmassage
-  image:
-    - file://mdbicquoid4zle9b
+  image: [ ]
   description: '<p>Een korte, effectieve massage van rug, nek, schouders en armen, over de kleding heen.<br>Ideaal bij spanning door werk, langdurig zitten of een drukke dag.<br>In de praktijk of op locatie bij particulieren en bedrijven.<br>Bedrijven kunnen contact opnemen voor mogelijkheden en tarieven.</p>'
   durations: |
     25 min | €30

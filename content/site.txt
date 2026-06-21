@@ -75,6 +75,10 @@ Address: Lindenlaan, Baarn
 
 ----
 
+Chamberofcommerce: 123456789
+
+----
+
 Cancellationpolicy:
 
 Mocht je verhinderd zijn, laat het dan zo snel mogelijk weten.
