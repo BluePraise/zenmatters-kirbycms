@@ -648,6 +648,29 @@ h1.hero__heading {
   white-space: pre-line;
 }
 
+.contact__methods {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0 0 2.5rem;
+}
+
+.contact__link--method {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--color-paper) 35%, transparent);
+  border-radius: 999px;
+  color: var(--color-paper);
+  text-decoration: none;
+}
+.contact__link--method:hover {
+  background: color-mix(in srgb, var(--color-paper) 12%, transparent);
+  text-decoration: none;
+}
+
 .contact__dl {
   list-style: none;
   padding: 0;

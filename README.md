@@ -1,36 +1,28 @@
-<img src="http://getkirby.com/assets/images/github/plainkit.jpg" width="300">
+# Zenmatters
 
-**Kirby: the CMS that adapts to any project, loved by developers and editors alike.**
-The Plainkit is a minimal Kirby setup with the basics you need to start a project from scratch. It is the ideal choice if you are already familiar with Kirby and want to start step-by-step.
+Website for Zenmatters, a home-based massage practice in Baarn (NL), built on [Kirby CMS](https://getkirby.com) so the owner can edit copy, images, pricing, and promotions herself via the Panel — no developer needed for day-to-day updates.
 
-You can learn more about Kirby at [getkirby.com](https://getkirby.com).
+See [CLAUDE.md](CLAUDE.md) for full project conventions, blueprint rules, staging deployment, and common tasks.
 
-### Try Kirby for free
+## Stack
 
-You can try Kirby and the Plainkit on your local machine or on a test server as long as you need to make sure it is the right tool for your next project. … and when you’re convinced, [buy your license](https://getkirby.com/buy).
+- Kirby CMS 5 (flat-file, PHP 8.2+)
+- Plain CSS with custom properties — no build step
+- Self-hosted fonts (TT Fors Trial)
 
-### Get going
+## Local development
 
-Read our guide on [how to get started with Kirby](https://getkirby.com/docs/guide/quickstart).
+```bash
+composer install
+/opt/homebrew/bin/php -S localhost:8765 kirby/router.php
+```
 
-You can [download the latest version](https://github.com/getkirby/plainkit/archive/main.zip) of the Plainkit.
-If you are familiar with Git, you can clone Kirby's Plainkit repository from Github.
+Visit `http://localhost:8765/panel` for the first-time admin setup.
 
-    git clone https://github.com/getkirby/plainkit.git
+## Deployment
 
-## What's Kirby?
+Code and content are pushed to a managed PHP host via `rsync` — see the **Staging server** and **Commands** sections in [CLAUDE.md](CLAUDE.md) for exact paths and commands. There is no CI/CD pipeline; deploys are manual.
 
--   **[getkirby.com](https://getkirby.com)** – Get to know the CMS.
--   **[Try it](https://getkirby.com/try)** – Take a test ride with our online demo. Or download one of our kits to get started.
--   **[Documentation](https://getkirby.com/docs/guide)** – Read the official guide, reference and cookbook recipes.
--   **[Issues](https://github.com/getkirby/kirby/issues)** – Report bugs and other problems.
--   **[Feedback](https://feedback.getkirby.com)** – You have an idea for Kirby? Share it.
--   **[Forum](https://forum.getkirby.com)** – Whenever you get stuck, don't hesitate to reach out for questions and support.
--   **[Discord](https://chat.getkirby.com)** – Hang out and meet the community.
--   **[Mastodon](https://mastodon.social/@getkirby)** – Spread the word.
--   **[Bluesky](https://bsky.app/profile/getkirby.com)** – Spread the word.
+## License
 
----
-
-© 2009 Bastian Allgeier
-[getkirby.com](https://getkirby.com) · [License agreement](https://getkirby.com/license)
+Kirby requires a paid license for production use — see [getkirby.com/buy](https://getkirby.com/buy).

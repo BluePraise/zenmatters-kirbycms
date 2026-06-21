@@ -28,7 +28,7 @@ site/
   config/config.php        Kirby configuration
   snippets/                Section partials — one file per section:
                            header, footer, hero, about, naomi,
-                           treatments, summer-offer, practical, contact
+                           treatments, practical, contact
   templates/               Page templates (home.php, privacyverklaring.php)
 assets/
   css/main.css             All CSS (brand tokens + BEM component styles)
@@ -55,7 +55,7 @@ vendor/                    PHP vendor — not committed
 - Homepage sections are grouped into **tabs** in `site/blueprints/pages/home.yml` — one tab per section. Keep the tab order in sync with the render order in `site/templates/home.php`.
 - Rich text fields use the `writer` type with only `bold` and `italic` marks — no headings inside body copy. Headings live on the section component.
 - Structure fields store repeatable items (treatments, certifications, nav items). Each item is a YAML `-\n  key: value` block in the content file.
-- Boolean toggles like `summerActive` hide entire sections. Prefer toggling over deleting content so the owner can restore it without re-entering data.
+- Boolean toggles like `promoActive` hide entire sections. Prefer toggling over deleting content so the owner can restore it without re-entering data.
 - Treatment pricing uses a `textarea` field (`durations`) with one price per line (`60 min | €80`), plus an optional `promoDurations` field in the same format for promo pricing shown when `promoActive` is toggled on. The template splits on `|` and newlines. The blueprint label explains the format.
 
 ## Panel

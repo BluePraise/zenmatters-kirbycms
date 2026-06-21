@@ -5,6 +5,32 @@
   $email              = $site->email();
   $address            = $site->address();
   $cancellationPolicy = $site->cancellationPolicy();
+
+  $phoneDigits = preg_replace('/[^\d+]/', '', $phone->value());
+  $waNumber    = ltrim($phoneDigits, '+');
+
+  $contactMethods = [
+    [
+      'active' => $site->contactBellenActive()->toBool(),
+      'label'  => 'Bellen',
+      'href'   => 'tel:' . $phoneDigits,
+    ],
+    [
+      'active' => $site->contactSmsActive()->toBool(),
+      'label'  => 'SMS',
+      'href'   => 'sms:' . $phoneDigits,
+    ],
+    [
+      'active' => $site->contactWhatsappActive()->toBool(),
+      'label'  => 'WhatsApp',
+      'href'   => 'https://wa.me/' . $waNumber,
+    ],
+    [
+      'active' => $site->contactSignalActive()->toBool(),
+      'label'  => 'Signal',
+      'href'   => 'https://signal.me/#p/' . $phoneDigits,
+    ],
+  ];
 ?>
 
 <section id="contact" class="section section--navy">
@@ -19,18 +45,21 @@
       <p class="contact__intro"><?= html($intro) ?></p>
     <?php endif ?>
 
-    <dl class="contact__dl">
-      <?php if ($phone->isNotEmpty()): ?>
-        <div class="contact__row">
-          <dt class="contact__dt">Telefoon / Signal / WhatsApp</dt>
-          <dd>
-            <a href="tel:<?= html(preg_replace('/\s+/', '', $phone->value())) ?>" class="contact__link">
-              <?= html($phone) ?>
-            </a>
-          </dd>
-        </div>
-      <?php endif ?>
+    <?php if ($phone->isNotEmpty()): ?>
+      <ul class="contact__methods">
+        <?php foreach ($contactMethods as $method): ?>
+          <?php if ($method['active']): ?>
+            <li class="contact__method">
+              <a href="<?= html($method['href']) ?>" class="contact__link contact__link--method">
+                <?= html($method['label']) ?>
+              </a>
+            </li>
+          <?php endif ?>
+        <?php endforeach ?>
+      </ul>
+    <?php endif ?>
 
+    <dl class="contact__dl">
       <?php if ($email->isNotEmpty()): ?>
         <div class="contact__row">
           <dt class="contact__dt">E-mail</dt>

@@ -44,6 +44,23 @@ tabs:
           phone:
             type: text
             label: Telefoon
+            help: 'Internationaal formaat, bijv. +31612345678. Wordt gebruikt voor bellen, SMS, WhatsApp en Signal.'
+          contactBellenActive:
+            type: toggle
+            label: Bellen tonen
+            default: true
+          contactSmsActive:
+            type: toggle
+            label: SMS tonen
+            default: true
+          contactWhatsappActive:
+            type: toggle
+            label: WhatsApp tonen
+            default: true
+          contactSignalActive:
+            type: toggle
+            label: Signal tonen
+            default: true
           email:
             type: text
             label: E-mailadres

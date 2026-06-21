@@ -39,7 +39,23 @@ Krijg je geen gehoor? Dan ben ik waarschijnlijk aan het masseren. Stuur een beri
 
 ----
 
-Phone: 06 13086055
+Phone: +31613086055
+
+----
+
+Contactbellenactive: true
+
+----
+
+Contactsmsactive: true
+
+----
+
+Contactwhatsappactive: true
+
+----
+
+Contactsignalactive: true
 
 ----
 
