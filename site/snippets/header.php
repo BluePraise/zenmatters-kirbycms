@@ -18,7 +18,17 @@
   $siteName   = $site->siteName()->or('Zenmatters');
   $navCtaLabel = $site->navCtaLabel();
   $navCtaHref  = $site->navCtaHref()->or('#contact');
+
+  $notificationActive = $site->notificationActive()->toBool();
+  $notificationText   = $site->notificationText();
 ?>
+
+<?php if ($notificationActive && $notificationText->isNotEmpty()): ?>
+  <style>:root { --notification-height: 2.75rem; }</style>
+  <div class="notification-bar">
+    <p class="notification-bar__text"><?= html($notificationText) ?></p>
+  </div>
+<?php endif ?>
 
 <header class="site-header">
   <div class="container-wide site-header__inner">

@@ -1,6 +1,6 @@
 # Zenmatters
 
-Website for Zenmatters, a home-based massage practice in Baarn (NL), built on [Kirby CMS](https://getkirby.com) so the owner can edit copy, images, pricing, and promotions herself via the Panel — no developer needed for day-to-day updates.
+Website for Zenmatters, a home-based massage practice in Baarn (NL), built on [Kirby CMS](https://getkirby.com) so the owner can edit copy, images, pricing, promotions, and a site-wide notification bar herself via the Panel — no developer needed for day-to-day updates.
 
 See [CLAUDE.md](CLAUDE.md) for full project conventions, blueprint rules, staging deployment, and common tasks.
 

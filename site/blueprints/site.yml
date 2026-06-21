@@ -10,6 +10,17 @@ tabs:
           siteName:
             type: text
             label: Sitenaam
+          notificationActive:
+            type: toggle
+            label: Mededelingenbalk tonen
+            help: Zet de balk boven de website aan of uit.
+            default: false
+          notificationText:
+            type: text
+            label: Mededelingentekst
+            help: 'Korte tekst, max. ca. 100 tekens. Houd het kort: de balk is maar één regel hoog en moet ook op een telefoonscherm passen.'
+            maxlength: 120
+            counter: true
           navigation:
             type: structure
             label: Navigatie

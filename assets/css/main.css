@@ -49,6 +49,9 @@
   /* Layout */
   --max-prose: 38rem;
   --max-wide:  82rem;
+
+  /* Notification bar — overridden inline when the bar is active */
+  --notification-height: 0px;
 }
 
 /* ─── Reset / base ─────────────────────────────────────────────────── */
@@ -188,10 +191,33 @@ p {
   letter-spacing: 2px;
 }
 
+/* ─── Notification bar ─────────────────────────────────────────────── */
+.notification-bar {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  z-index: 51;
+  height: var(--notification-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-navy-700);
+  padding-inline: 1.5rem;
+}
+
+.notification-bar__text {
+  color: var(--color-sand-50);
+  font-size: 0.8125rem;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  max-width: var(--max-wide);
+  margin-inline: auto;
+}
+
 /* ─── Header ───────────────────────────────────────────────────────── */
 .site-header {
   position: fixed;
-  top: 0;
+  top: var(--notification-height);
   inset-inline: 0;
   z-index: 50;
   background-color: color-mix(in srgb, var(--color-paper) 95%, transparent);
