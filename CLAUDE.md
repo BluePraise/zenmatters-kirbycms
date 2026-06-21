@@ -28,7 +28,7 @@ site/
   config/config.php        Kirby configuration
   snippets/                Section partials — one file per section:
                            header, footer, hero, about, naomi,
-                           treatments, pricing, summer-offer, practical, contact
+                           treatments, summer-offer, practical, contact
   templates/               Page templates (home.php, privacyverklaring.php)
 assets/
   css/main.css             All CSS (brand tokens + BEM component styles)
@@ -54,14 +54,14 @@ vendor/                    PHP vendor — not committed
 - Global fields (siteName, navigation, contact) live in `site/blueprints/site.yml` and are read via `$site->field()`. Don't duplicate them on individual page blueprints.
 - Homepage sections are grouped into **tabs** in `site/blueprints/pages/home.yml` — one tab per section. Keep the tab order in sync with the render order in `site/templates/home.php`.
 - Rich text fields use the `writer` type with only `bold` and `italic` marks — no headings inside body copy. Headings live on the section component.
-- Structure fields store repeatable items (treatments, pricing groups, certifications, nav items). Each item is a YAML `-\n  key: value` block in the content file.
+- Structure fields store repeatable items (treatments, certifications, nav items). Each item is a YAML `-\n  key: value` block in the content file.
 - Boolean toggles like `summerActive` hide entire sections. Prefer toggling over deleting content so the owner can restore it without re-entering data.
-- Pricing items use a `textarea` field with one price per line (`60 min | €80`). The template splits on `|` and newlines. The blueprint label explains the format.
+- Treatment pricing uses a `textarea` field (`durations`) with one price per line (`60 min | €80`), plus an optional `promoDurations` field in the same format for promo pricing shown when `promoActive` is toggled on. The template splits on `|` and newlines. The blueprint label explains the format.
 
 ## Panel
 
 - First-time setup: visit `/panel` → create an admin account. The `panel.install` option in `config.php` allows this; disable it after the first account is created.
-- Blueprint tabs group related fields (Hero / Over Zenmatters / Over Naomi / Behandelingen / Tarieven / Aanbieding / Praktisch).
+- Blueprint tabs group related fields (Hero / Over Zenmatters / Over Naomi / Behandelingen / Aanbieding / Praktisch).
 - Global settings (siteName, navigation, contact info) are edited under **Site** in the Panel sidebar, not on the home page.
 - The Panel is the sole editing interface — there is no visual overlay / click-to-edit. Changes save immediately; the flat-file store means no publish step.
 

@@ -20,8 +20,7 @@ hoort bij een onderdeel van de homepage:
 | **Hero** | De titel, ondertitel en knoptekst bovenaan de site, plus de grote foto |
 | **Over Zenmatters** | De introductietekst en bijbehorende foto |
 | **Over Naomi** | Tekst over Naomi, haar foto en certificaten |
-| **Behandelingen** | De lijst met behandelingen en hun omschrijving |
-| **Tarieven** | De prijzen, per categorie |
+| **Behandelingen** | De lijst met behandelingen, hun omschrijving en prijzen |
 | **Aanbieding** | De zomeraanbieding (kan aan/uit gezet worden) |
 | **Praktisch** | Praktische informatie (bereikbaarheid, parkeren, etc.) |
 
@@ -59,15 +58,17 @@ Sommige onderdelen bestaan uit een lijst met items, bijvoorbeeld de
 
 ## 6. Prijzen invullen
 
-Bij **Tarieven** vul je per categorie de prijzen in. Zet **één prijs per regel**,
-in dit formaat:
+Bij **Behandelingen** vul je per behandeling de prijzen in bij het veld
+**"Duur & prijs"**. Zet **één prijs per regel**, in dit formaat:
 
 ```
 60 min | €80
 90 min | €110
 ```
 
-Dus: duur, dan een verticaal streepje `|`, dan de prijs.
+Dus: duur, dan een verticaal streepje `|`, dan de prijs. Wil je tijdens een
+actie een afwijkende prijs tonen? Vul die dan in bij **"Actieprijs"** (zelfde
+formaat) en zet de schakelaar **"Actieprijs tonen"** aan.
 
 ## 7. De zomeraanbieding tonen of verbergen
 
