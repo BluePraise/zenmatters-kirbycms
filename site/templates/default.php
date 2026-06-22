@@ -6,6 +6,13 @@
       <h1 style="font-size:clamp(1.875rem,5vw,2.5rem);margin-bottom:2rem;">
         <?= html($page->title()) ?>
       </h1>
+      <article>
+        <?php if ($page->body()->isNotEmpty()): ?>
+          <div class="richtext"><?= $page->body() ?></div>
+        <?php elseif ($page->text()->isNotEmpty()): ?>
+          <div class="richtext"><?= $page->text()->kt() ?></div>
+        <?php endif ?>
+      </article>
     </div>
   </section>
 </main>
