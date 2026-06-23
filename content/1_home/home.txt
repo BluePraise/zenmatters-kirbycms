@@ -1,0 +1,193 @@
+Title: Home
+
+----
+
+Herotitle: Zenmatters
+
+----
+
+Herotagline: Zenmatters – massagepraktijk aan huis
+
+----
+
+Heroctalabel: Neem contact op en plan een massage
+
+----
+
+Heroportrait: - file://vuicwhnidejnxt72
+
+----
+
+Aboutheading: Over Zenmatters
+
+----
+
+Aboutbody: <p>Zenmatters in Baarn is een kleinschalige massagepraktijk aan huis voor vrouwen, waar rust en aandacht centraal staan.</p><p>Ik bied ontspanningsmassage en massage bij spanningsklachten, vermoeidheid, fibromyalgie en chronische pijn. De massage stemmen we altijd samen af, zodat deze aansluit bij wat jij op dat moment nodig hebt.</p><p>Zenmatters – persoonlijk, ontspannen en zonder haast.</p>
+
+----
+
+Aboutgalleryportraitleft: - file://pblgijmtwxwk0av7
+
+----
+
+Aboutgallerylandscapetop: - file://cyzsxisuwntyxzbr
+
+----
+
+Aboutgallerylandscapebottom: - file://crab7aksi6i2ywmg
+
+----
+
+Aboutgalleryportraitright: - file://bkceems6q9patt3o
+
+----
+
+Aboutctalabel: Maak een afspraak
+
+----
+
+Naomiheading: Over Naomi
+
+----
+
+Naomiportrait: - file://n3nvnfemruirigrx
+
+----
+
+Naomibody: <p><strong>Over mij</strong></p><p>Mijn naam is Naomi en ik geef massages met aandacht, rust en afstemming. Het is mijn doel dat mensen mijn praktijk verlaten met een ontspannen lichaam en een opgeladen gevoel.</p><p>Door mijn jarenlange werk in de mediawereld weet ik hoe spanning, stress en langdurig zitten invloed kunnen hebben op het lichaam. Ik heb ervaren hoe belangrijk rust en aandacht voor het lichaam kunnen zijn, en hoeveel verschil dat kan maken. Dat is ook wat ik anderen graag wil bieden.</p><p>In mijn praktijk richt ik me op ontspanningsmassage en massage bij spanningsklachten, fibromyalgie en chronische pijn. Daarnaast bied ik stoelmassages aan, zowel in de praktijk als op locatie bij bedrijven en particulieren.</p><p>Mijn manier van werken is rustig, persoonlijk en professioneel. Massage hoeft niet hard of pijnlijk te zijn om effectief te zijn. Juist aandacht en rust kunnen vaak al veel betekenen, zeker wanneer je jezelf dit regelmatig gunt.</p>
+
+----
+
+Naomicertifications:
+
+- 
+  item: Integrale massage
+- 
+  item: Klassieke massage met anatomie
+- 
+  item: 'Integrale rug-, nek- en schoudermassage'
+- 
+  item: Stoelmassage
+- 
+  item: >
+    Massage bij fibromyalgie en chronische
+    pijn
+
+----
+
+Promoactive: true
+
+----
+
+Promotext:
+
+☀️ Speciaal zomertarief 2026 ☀️
+
+Maak deze zomer kennis met Zenmatters tegen een gereduceerd kennismakingstarief.
+
+Geldig in juli en augustus 2026.
+
+----
+
+Treatments:
+
+- 
+  name: Ontspanningsmassage
+  image: [ ]
+  description: '<p>Een relaxte massage die helpt bij ontspanning en het verminderen van stress, vermoeidheid en opgebouwde spanning in het lichaam. De massage kan het hele lichaam omvatten of juist gericht zijn op specifieke gebieden, afhankelijk van waar op dat moment jouw behoefte ligt. De druk stemmen we altijd samen af, zodat de massage precies aansluit bij wat jij prettig vindt.</p>'
+  durations: |
+    45 min | €55
+    60 min | €70
+    75 min | €85
+  promodurations: |
+    45 min | €45
+    60 min | €60
+    75 min | €75
+  ctalabel: ""
+  note: ""
+  formentoo: 'false'
+- 
+  name: 'Rug-, nek- en schoudermassage'
+  image: [ ]
+  description: '<p>Gerichte massage bij vastzittende spieren en spanning in de rug, nek en schouders.<br>Met extra aandacht voor gebieden waar klachten of overbelasting zijn ontstaan.</p>'
+  durations: |
+    45 min | €55
+    60 min | €70
+    75 min | €85
+  promodurations: |
+    45 min | €45
+    60 min | €60
+    75 min | €75
+  ctalabel: ""
+  note: ""
+  formentoo: 'false'
+- 
+  name: >
+    Massage bij fibromyalgie en chronische
+    pijn
+  image: [ ]
+  description: '<p>Een rustige, aangepaste massage gericht op ontspanning, doorbloeding en verlichting van spanning en pijnklachten.<br>Altijd afgestemd op wat voor jou op dat moment mogelijk en prettig is.</p>'
+  durations: |
+    45 min | €55
+    60 min | €70
+    75 min | €85
+  promodurations: |
+    45 min | €45
+    60 min | €60
+    75 min | €75
+  ctalabel: ""
+  note: ""
+  formentoo: 'false'
+- 
+  name: Stoelmassage
+  image: [ ]
+  description: '<p>Een korte, effectieve massage van rug, nek, schouders en armen, over de kleding heen.<br>Ideaal bij spanning door werk, langdurig zitten of een drukke dag.<br>In de praktijk of op locatie bij particulieren en bedrijven.<br>Bedrijven kunnen contact opnemen voor mogelijkheden en tarieven.</p>'
+  durations: |
+    25 min | €30
+    35 min | €40
+  promodurations: |
+    25 min | €25
+    35 min | €35
+  ctalabel: ""
+  note: 'Stoelmassage op locatie: binnen 10 km van Baarn €5 toeslag per afspraak. Buiten deze straal in overleg. Bedrijven: neem contact op voor tarieven per dagdeel of uur.'
+  formentoo: 'false'
+- 
+  name: ""
+  image: [ ]
+  description: ""
+  durations: ""
+  promodurations: ""
+  ctalabel: ""
+  note: ""
+  formentoo: 'false'
+
+----
+
+Practicalheading: Praktische informatie
+
+----
+
+Practicalitems:
+
+- 
+  item: Alle behandelingen zijn op afspraak
+- 
+  item: Overdag en in de avond mogelijk
+- 
+  item: >
+    Betaling contant of via betaalverzoek
+    (Tikkie)
+- 
+  item: Olie en handdoeken zijn inbegrepen
+- 
+  item: >
+    Draag comfortabele kleding bij
+    stoelmassage
+
+----
+
+Practicalnote: De praktijkruimte bevindt zich op de eerste verdieping, bereikbaar via een trap.
+
+----
+
+Uuid: atfnj2vfxeusjga2

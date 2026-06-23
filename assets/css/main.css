@@ -165,6 +165,133 @@ p {
   gap: 1.5rem;
 }
 
+/* ─── About slider (4-photo crossfade) ──────────────────────────────── */
+/* Box height stays fixed at the landscape ratio (overrides .split__image's
+   4:5 default). Landscape slides fill the box edge-to-edge; portrait slides
+   are centered inside it at their own true (narrower) shape, letterboxed
+   left/right, instead of being cropped or stretched to fill the width. */
+.about-slider {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.about-slider__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  z-index: 0;
+}
+.about-slider__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.about-slider__slide--landscape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-slider__slide--portrait img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.about-slider__dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.about-slider__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background-color: color-mix(in srgb, var(--color-paper) 70%, transparent);
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.about-slider__dot.is-active {
+  background-color: var(--color-paper);
+}
+
+/* ─── Lightbox ───────────────────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: color-mix(in srgb, var(--color-navy-900) 92%, transparent);
+}
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__image {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.lightbox__close,
+.lightbox__nav {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 9999px;
+  background-color: var(--color-navy-700);
+  color: var(--color-paper);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox__close:hover,
+.lightbox__nav:hover {
+  background-color: var(--color-navy-500);
+}
+
+.lightbox__close {
+  top: 1rem;
+  right: 1rem;
+}
+.lightbox__nav--prev {
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.lightbox__nav--next {
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* ─── Button ───────────────────────────────────────────────────────── */
 .btn-primary {
   display: inline-flex;

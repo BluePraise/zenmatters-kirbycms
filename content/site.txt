@@ -10,7 +10,7 @@ Notificationactive: true
 
 ----
 
-Notificationtext: Zomer aanbieding!
+Notificationtext: ☀️ Speciaal zomertarief - juli en augustus 2026 ☀️
 
 ----
 
@@ -25,10 +25,13 @@ Navigation:
 - 
   label: Contact
   href: '#contact'
+- 
+  label: FAQ
+  href: veelgestelde-vragen
 
 ----
 
-Navctalabel: Neem contact op en plan een massage
+Navctalabel: Plan een massage
 
 ----
 
@@ -75,7 +78,7 @@ Address: Lindenlaan, Baarn
 
 ----
 
-Chamberofcommerce: 123456789
+Chamberofcommerce: 
 
 ----
 
