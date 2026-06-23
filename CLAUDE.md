@@ -20,7 +20,7 @@ A website for **Zenmatters**, a small home-based massage practice in Baarn (NL).
 ```
 content/                   Flat-file content (edited via Panel or directly)
   site.txt                 Global: siteName, navigation, contact info
-  home/home.txt            All homepage section fields
+  1_home/home.txt          All homepage section fields
   privacyverklaring/       Privacy page content
 site/
   blueprints/site.yml      Panel fields for global settings (Site tab)
@@ -84,7 +84,7 @@ vendor/                    PHP vendor — not committed
 
 **Add a new section to the homepage**
 1. Add fields to `site/blueprints/pages/home.yml` (new tab or within an existing tab)
-2. Add matching fields to `content/home/home.txt` (with `----` separators around each new field)
+2. Add matching fields to `content/1_home/home.txt` (with `----` separators around each new field)
 3. Create a snippet in `site/snippets/<name>.php`
 4. Add `<?php snippet('<name>') ?>` in `site/templates/home.php`
 
@@ -124,22 +124,21 @@ composer update
 # Regenerate Composer autoload after adding plugins
 composer dump-autoload
 
-# ⚠️  IMPORTANT: staging stores the home page as content/1_home/ (Kirby page ordering prefix).
-#    Local has content/home/. Always use the explicit paths below — never rsync content/ wholesale.
+# Local content/1_home/ now matches staging's directory name exactly (Kirby page ordering prefix).
 
-# Pull content/home from staging → local
+# Pull content/1_home from staging → local
 rsync -avz -e "ssh -p18765" \
   u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/1_home/ \
-  ./content/home/
+  ./content/1_home/
 
 # Pull site.txt from staging → local
 rsync -avz -e "ssh -p18765" \
   u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/site.txt \
   ./content/site.txt
 
-# Push home.txt to staging (maps local content/home/ → remote content/1_home/)
+# Push home.txt to staging
 rsync -avz -e "ssh -p18765" \
-  ./content/home/home.txt \
+  ./content/1_home/home.txt \
   u2827-g9lpwz7hodtd@ssh.navesinkwebsolutions.com:/home/u2827-g9lpwz7hodtd/www/zenmatters.navesinkwebsolutions.com/public_html/zenmatters-kirby/content/1_home/home.txt
 
 # Push code (non-content) to staging
