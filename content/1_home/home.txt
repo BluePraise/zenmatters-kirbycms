@@ -26,19 +26,12 @@ Aboutbody: <p>Zenmatters in Baarn is een kleinschalige massagepraktijk aan huis 
 
 ----
 
-Aboutgalleryportraitleft: - file://pblgijmtwxwk0av7
+Aboutgalleryimages:
 
-----
-
-Aboutgallerylandscapetop: - file://cyzsxisuwntyxzbr
-
-----
-
-Aboutgallerylandscapebottom: - file://crab7aksi6i2ywmg
-
-----
-
-Aboutgalleryportraitright: - file://bkceems6q9patt3o
+- file://cyzsxisuwntyxzbr
+- file://pblgijmtwxwk0av7
+- file://crab7aksi6i2ywmg
+- file://bkceems6q9patt3o
 
 ----
 

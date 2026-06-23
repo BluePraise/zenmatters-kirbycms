@@ -3,13 +3,11 @@ $heading  = $page->aboutHeading();
 $body     = $page->aboutBody();
 $ctaLabel = $page->aboutCtaLabel();
 
-$slides = [
-  ['file' => $page->aboutGalleryLandscapeTop()->toFile(),    'orientation' => 'landscape'],
-  ['file' => $page->aboutGalleryPortraitLeft()->toFile(),    'orientation' => 'portrait'],
-  ['file' => $page->aboutGalleryLandscapeBottom()->toFile(), 'orientation' => 'landscape'],
-  ['file' => $page->aboutGalleryPortraitRight()->toFile(),   'orientation' => 'portrait'],
-];
-$slides = array_filter($slides, fn ($slide) => $slide['file'] !== null);
+$slides = [];
+foreach ($page->aboutGalleryImages()->toFiles() as $file) {
+  $orientation = $file->width() >= $file->height() ? 'landscape' : 'portrait';
+  $slides[] = ['file' => $file, 'orientation' => $orientation];
+}
 ?>
 
 <section class="section section--paper">

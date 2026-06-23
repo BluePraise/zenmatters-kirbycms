@@ -37,26 +37,10 @@ tabs:
             marks:
               - bold
               - italic
-          aboutGalleryPortraitLeft:
+          aboutGalleryImages:
             type: files
-            label: Foto-collage — links (verticale foto)
-            help: "Samen met de 3 foto's hieronder vormen deze een foto-collage naast de tekst: 1 verticale foto links, 2 horizontale foto's in het midden (boven/onder) en 1 verticale foto rechts."
-            max: 1
-            query: page.files
-          aboutGalleryLandscapeTop:
-            type: files
-            label: Foto-collage — midden boven (horizontale foto)
-            max: 1
-            query: page.files
-          aboutGalleryLandscapeBottom:
-            type: files
-            label: Foto-collage — midden onder (horizontale foto)
-            max: 1
-            query: page.files
-          aboutGalleryPortraitRight:
-            type: files
-            label: Foto-collage — rechts (verticale foto)
-            max: 1
+            label: Foto-slider
+            help: "Voeg zoveel foto's toe als je wilt — ze wisselen automatisch in elkaar over naast de tekst. Liggende en staande foto's worden automatisch herkend. Sleep de foto's om de volgorde te wijzigen."
             query: page.files
           aboutCtaLabel:
             type: text
