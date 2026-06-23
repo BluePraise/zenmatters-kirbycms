@@ -17,6 +17,16 @@
   $navCtaLabel = $site->navCtaLabel();
   $navCtaHref  = $site->navCtaHref()->or('#contact');
 
+  // Anchor-only hrefs (e.g. #naomi) only work on the homepage, so on other
+  // pages they need to point back to the homepage first.
+  $resolveHref = function (string $href) use ($page, $site) {
+    if (!str_starts_with($href, '#')) {
+      return $href;
+    }
+    return $page->isHomePage() ? $href : $site->homePage()->url() . $href;
+  };
+  $navCtaHref = $resolveHref($navCtaHref);
+
   $notificationActive = $site->notificationActive()->toBool();
   $notificationText   = $site->notificationText();
   $showNotification   = $notificationActive && $notificationText->isNotEmpty();
@@ -44,7 +54,7 @@
 
     <nav aria-label="Hoofdnavigatie" class="site-header__nav">
       <?php foreach ($navItems as $item): ?>
-        <a href="<?= html($item->href()) ?>" class="site-header__nav-link">
+        <a href="<?= html($resolveHref($item->href())) ?>" class="site-header__nav-link">
           <?= html($item->label()) ?>
         </a>
       <?php endforeach ?>
@@ -71,7 +81,7 @@
   <div class="mobile-menu-dropdown" id="mobile-menu-dropdown" hidden>
     <?php foreach ($navItems as $item): ?>
       <div class="mobile-menu-dropdown__item">
-        <a href="<?= html($item->href()) ?>" class="mobile-menu-dropdown__link">
+        <a href="<?= html($resolveHref($item->href())) ?>" class="mobile-menu-dropdown__link">
           <?= html($item->label()) ?>
         </a>
       </div>
