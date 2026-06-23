@@ -147,6 +147,10 @@ p {
   border-radius: 2px;
 }
 
+#naomi .split__image {
+  aspect-ratio: 4/3;
+}
+
 .split__image img {
   width: 100%;
   height: 100%;
