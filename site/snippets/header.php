@@ -17,6 +17,15 @@
   $navCtaLabel = $site->navCtaLabel();
   $navCtaHref  = $site->navCtaHref()->or('#contact');
 
+  // Anchor hrefs (e.g. #naomi) only resolve on the homepage where those
+  // section IDs exist. From any other page, route through the homepage first.
+  $resolveNavHref = function (string $href) use ($page, $site): string {
+    if (substr($href, 0, 1) === '#' && !$page->isHomePage()) {
+      return $site->homePage()->url() . $href;
+    }
+    return $href;
+  };
+
   $notificationActive = $site->notificationActive()->toBool();
   $notificationText   = $site->notificationText();
   $showNotification   = $notificationActive && $notificationText->isNotEmpty();
@@ -44,12 +53,12 @@
 
     <nav aria-label="Hoofdnavigatie" class="site-header__nav">
       <?php foreach ($navItems as $item): ?>
-        <a href="<?= html($item->href()) ?>" class="site-header__nav-link">
+        <a href="<?= html($resolveNavHref($item->href()->value())) ?>" class="site-header__nav-link">
           <?= html($item->label()) ?>
         </a>
       <?php endforeach ?>
       <?php if ($navCtaLabel->isNotEmpty()): ?>
-        <a href="<?= html($navCtaHref) ?>" class="btn-primary btn-primary--sm">
+        <a href="<?= html($resolveNavHref($navCtaHref->value())) ?>" class="btn-primary btn-primary--sm">
           <?= html($navCtaLabel) ?>
         </a>
       <?php endif ?>
@@ -71,14 +80,14 @@
   <div class="mobile-menu-dropdown" id="mobile-menu-dropdown" hidden>
     <?php foreach ($navItems as $item): ?>
       <div class="mobile-menu-dropdown__item">
-        <a href="<?= html($item->href()) ?>" class="mobile-menu-dropdown__link">
+        <a href="<?= html($resolveNavHref($item->href()->value())) ?>" class="mobile-menu-dropdown__link">
           <?= html($item->label()) ?>
         </a>
       </div>
     <?php endforeach ?>
     <?php if ($navCtaLabel->isNotEmpty()): ?>
       <div class="mobile-menu-dropdown__item mobile-menu-dropdown__item--cta">
-        <a href="<?= html($navCtaHref) ?>" class="mobile-menu-dropdown__cta">
+        <a href="<?= html($resolveNavHref($navCtaHref->value())) ?>" class="mobile-menu-dropdown__cta">
           <?= html($navCtaLabel) ?>
         </a>
       </div>
