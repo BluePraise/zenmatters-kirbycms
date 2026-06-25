@@ -2,6 +2,7 @@
   $navItems = $site->navigation()->toStructure();
   $siteName  = $site->siteName()->or('Zenmatters');
   $chamberOfCommerce  = $site->chamberOfCommerce();
+  $VAT                = $site->VAT();
 ?>
 
 <footer class="site-footer">
@@ -10,6 +11,9 @@
       © <?= date('Y') ?> <?= html($siteName) ?>
       <?php if ($chamberOfCommerce->isNotEmpty()): ?>
         <span class="site-footer__kvk"> - KvK <?= html($chamberOfCommerce) ?></span>
+      <?php endif ?>
+      <?php if ($VAT->isNotEmpty()): ?>
+        <span class="site-footer__vat"> - BTW <?= html($VAT) ?></span>
       <?php endif ?>
     </p>
     <nav aria-label="Footer-navigatie" class="site-footer__nav">

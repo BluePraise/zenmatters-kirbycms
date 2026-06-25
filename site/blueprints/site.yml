@@ -81,6 +81,9 @@ tabs:
           chamberOfCommerce:
             type: number
             label: Kamer van Koophandel nummer
+          VAT:
+            type: text
+            label: BTW-nummer
           cancellationPolicy:
             type: textarea
             label: Annuleringsbeleid

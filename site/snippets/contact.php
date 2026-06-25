@@ -5,6 +5,7 @@
   $email              = $site->email();
   $address            = $site->address();
   $chamberOfCommerce  = $site->chamberOfCommerce();
+  $VAT                = $site->VAT();
   $cancellationPolicy = $site->cancellationPolicy();
 
   $phoneDigits = preg_replace('/[^\d+]/', '', $phone->value());
@@ -83,6 +84,12 @@
         <div class="contact__row">
           <dt class="contact__dt">KvK</dt>
           <dd><?= html($chamberOfCommerce) ?></dd>
+        </div>
+      <?php endif ?>
+      <?php if ($VAT->isNotEmpty()): ?>
+        <div class="contact__row">
+          <dt class="contact__dt">BTW</dt>
+          <dd><?= html($VAT) ?></dd>
         </div>
       <?php endif ?>
     </dl>
