@@ -142,3 +142,11 @@ tabs:
           practicalNote:
             type: textarea
             label: Toegankelijkheidsnotitie
+
+  media:
+    label: Foto's beheren
+    sections:
+      files:
+        type: files
+        label: Geüploade foto's
+        help: "Hier kun je foto's uploaden, verwijderen of hernoemen. Let op: als je een foto verwijdert die nog bij een sectie hierboven is geselecteerd, verdwijnt die foto ook van de website."
